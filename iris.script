@@ -1,0 +1,14 @@
+
+zn "%SYS"
+Do ##class(Security.Users).UnExpireUserPasswords("*")
+Do ##class(Config.NLS.Locales).Install("jpuw")
+set ssl = ##class(Security.SSLConfigs).%New()
+set ssl.Name = "MYSSL"
+set status = ssl.%Save()
+
+zn "USER"
+do $System.OBJ.LoadDir("/opt/irisapp/src","ck",,1)
+set url = "https://jp.community.intersystems.com/sitemap.xml"
+set status = ##class(DC.Tools).CollectDCContentsUrl(url)
+set status = ##class(DC.Tools).BuildDCContentsDB()
+halt

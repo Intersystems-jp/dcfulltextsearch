@@ -13,8 +13,9 @@
 - Windowsではコマンドプロンプト、MACではターミナルを起動します。
 - gitでクローンします。
 
-'git clone https://github.com/diashenrique/iris-rad-studio.git'
-
+```
+git clone https://github.com/diashenrique/iris-rad-studio.git
+```
 
 - 例えば、Windowsでc:\temp\dcfulltextsearchに展開したとすると
 

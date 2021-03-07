@@ -4,14 +4,17 @@
 
 ## 前提条件
 
-- このツールを動かすためには、Docker for WindowsまたはDocker for MACをインストールする必要があります。
+- このツールを動かすためには、Dockerが必要です。
+- WindowsにはDocker for Windows、Macには、Docker for MACをインストールする必要があります。
 - なお現時点ではM1 Macでは動作しません。
 
 ## セットアップ
 
-- dcfulltextsearch.zipを適当なディレクトリーにおいて、zipツールで展開します。
-
 - Windowsではコマンドプロンプト、MACではターミナルを起動します。
+- gitでクローンします。
+
+'git clone https://github.com/diashenrique/iris-rad-studio.git'
+
 
 - 例えば、Windowsでc:\temp\dcfulltextsearchに展開したとすると
 

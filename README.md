@@ -14,7 +14,7 @@
 - gitでクローンします。
 
 ```
-git clone https://github.com/diashenrique/iris-rad-studio.git
+git clone https://github.com/Intersystems-jp/dcfulltextsearch.git
 ```
 
 - 例えば、Windowsでc:\temp\dcfulltextsearchに展開したとすると

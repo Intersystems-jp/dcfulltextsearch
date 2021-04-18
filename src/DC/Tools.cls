@@ -75,8 +75,8 @@ ClassMethod BuildDCContentsDB() As %Status
 		 set contentdb = ##class(DC.Topic).%New()
 		 set contentdb.url = url
 		 set title = $piece(url,"post/",2)
-		 set contentdb.Title = ##class(%CSP.Page).UnescapeURL(title,"UTF8")		 
-		 set contentdb.Text = textdata
+		 set contentdb.Title = ##class(%CSP.Page).UnescapeURL(title)
+		 set contentdb.Text = ##class(%CSP.Page).UnescapeHTML(textdata)
 		 set status = contentdb.%Save()
 	 }
 	 

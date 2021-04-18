@@ -1,7 +1,7 @@
 Class DC.Topic Extends %Persistent [ Language = objectscript ]
 {
 
-Property Text As %Text(COLLATION = "SQLUPPER", LANGUAGECLASS = "%TextJapanese", MAXLEN = 640000);
+Property Text As %Text(COLLATION = "SQLUPPER", LANGUAGECLASS = "%TextJapanese", MAXLEN = 3000000);
 
 Property url As %String(MAXLEN = 1000);
 

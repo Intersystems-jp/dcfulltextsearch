@@ -7,7 +7,9 @@ set ssl.Name = "MYSSL"
 set status = ssl.%Save()
 
 zn "USER"
+set io = ##class(%SYS.NLS.Device).SetIO("UTF8")
 do $System.OBJ.LoadDir("/opt/irisapp/src","ck",,1)
+do $SYSTEM.CSP.LoadPageDir("/csp/user")
 set url = "https://jp.community.intersystems.com/sitemap.xml"
 set status = ##class(DC.Tools).CollectDCContentsUrl(url)
 set status = ##class(DC.Tools).BuildDCContentsDB()

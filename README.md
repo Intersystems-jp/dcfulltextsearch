@@ -1,5 +1,5 @@
-## Developer Comunity 日本語コンテンツ全文検索システム 
-## Developer Comunity Japanese full-text content search system
+## Developer Community 日本語コンテンツ全文検索システム 
+## Developer Community Japanese full-text content search system
 
 - 現状のDCの日本語での検索機能は十分とはいえません。
 - そこでIRISのiFind機能を使った全文検索システムを構築しました。

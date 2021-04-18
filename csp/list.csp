@@ -1,0 +1,77 @@
+﻿<html>
+
+<head>
+<meta http-equiv="Refresh" content="300; URL=#url(search.csp)#">
+<meta http-equiv="Content-Type"
+content="text/html; charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<title>Developer Comunity Full Text Search List</title>
+<!-- Specify that this page is PRIVATE -->
+<csp:CLASS PRIVATE=1>
+</head>
+
+<BODY bgcolor="#FFFFFF">
+
+<TABLE>
+  <TBODY>
+    <TR>
+    <TD width="600" align="center">
+    <H1 align="center">
+<SCRIPT LANGUAGE="CACHE" runat=server>
+ Set status =..FullTextSearch(.result)
+</SCRIPT>
+
+<FONT size="6">Developer Community</FONT><FONT size="6" face="ＭＳ Ｐゴシック"> </FONT><FONT size="6">検索結果</FONT></H1><BR>
+      <P>検索結果：　#(result)#　件見つかりました。</P>
+ <SCRIPT LANGUAGE="CACHE" runat=server>
+ Set i=0
+ Set count = result
+</SCRIPT>
+</P>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+<TABLE>
+  <TBODY>
+    <TR>
+      <csp:WHILE CONDITION='count > i'>
+      <server>
+      set i = $increment(i)
+      </server>
+      <TD width="750" align="center">
+      <P align="left"><A href="#($list(result(i),3))#" target="_blank">#($list(result(i),2))#</A></P>
+      </P>
+      </TD>
+    </TR>
+    </csp:WHILE>
+  </TBODY>
+</TABLE>
+<TABLE>
+  <TBODY>
+    <TR>
+      <TD width="570" align="center">
+      <P>　</P>
+      <BR>
+      <A href="#url(search.csp)#">検索ページに戻る</A>
+      <HR>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</BODY>
+<CSP:METHOD NAME=FullTextSearch arguments="Result:%String" returntype=%Status>
+ set status = $$$OK
+ Set t=%request.Get("Keyword")
+ Set tStatement = ##Class(%SQL.Statement).%New()
+ Set tResult = tStatement.%ExecDirect(.tS,"SELECT id,title,url FROM DC.Topic WHERE %ID %FIND Search_Index(textindex,?)",t)
+ set count = 0
+ While (tResult.%Next()) {
+   set count = $increment(count)
+   set Result(count) = $listbuild(tResult.%Get("id"),tResult.%Get("title"),tResult.%Get("url"))
+ }
+ set Result = count
+ Quit status
+</CSP:METHOD>
+</html>
+

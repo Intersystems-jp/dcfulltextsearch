@@ -1,0 +1,41 @@
+﻿<HTML>
+<HEAD>
+<meta http-equiv="Refresh" content="300; URL=#url(search.csp)#">
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<META name="GENERATOR" content="IBM HomePage Builder 2001 V5.0.0 for Windows">
+<TITLE>Developer Community Full Text Search</TITLE>
+</HEAD>
+<BODY bgcolor="#ffffff">
+
+<TABLE>
+  <TBODY>
+    <TR>
+      <TD width="600" align="center">
+      <H1 align="center">
+
+<SCRIPT LANGUAGE=CACHE METHOD="OnPreHTTP" RETURNTYPE="%Boolean">
+ Quit $$$OK
+</SCRIPT>
+
+<SCRIPT LANGUAGE="CACHE" runat=server>
+</SCRIPT>
+<FONT size="6">Developer Community</FONT><FONT size="6" face="ＭＳ Ｐゴシック"> </FONT><FONT size="6">全文検索</FONT></H1><BR>
+      <FORM action="list.csp" method="POST">
+      <TABLE>
+        <TBODY>
+          <TR>
+            <TD align="right" width="200">キーワード検索：　</TD>
+            <TD><INPUT type="text" size="50" name="Keyword"></TD>
+          </TR>
+        </TBODY>
+      </TABLE>
+      <P><INPUT type="submit" name="Search" value="検索"></P>
+      </FORM>
+      <BR>
+      <HR>
+      </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</BODY>
+</HTML>

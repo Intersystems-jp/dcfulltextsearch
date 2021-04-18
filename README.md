@@ -13,7 +13,7 @@
 - WindowsにはDocker for Windows、Macには、Docker for MACをインストールする必要があります。
 - M1 Macで動作させるためには、Dockefileを修正してARM64のイメージを使用します。
 - In order to run this tool, Docker is required.
-- o run this tool, you need to install Docker for Windows, and for Mac, Docker for MAC.
+- to run this tool, you need to install Docker for Windows, and for Mac, Docker for MAC.
 - To make it work on M1 Mac, modify the Dockefile and use the ARM64 image.
 
 ## セットアップ 

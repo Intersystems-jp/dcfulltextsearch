@@ -41,7 +41,7 @@ git clone https://github.com/Intersystems-jp/dcfulltextsearch.git
 - を順番に実行してください。
 - run in that order.
 
-- urlに指定するポート番号は、デフォルト52775になっていますが、変更したい場合は、docker-composeになっていますが、変更したい場合は、docker-compose.ymlの設定を変更してください。
+- urlに指定するポート番号は、デフォルト52775になっていますが、変更したい場合は、docker-compose.ymlの設定を変更してください。
 - The port number you specify for the url defaults to 52775, but if you want to change it, modify the docker-compose.yml
 
 - 時間はマシンパワーによりますが、10分強かかります。（今後コンテンツが増えるにつれ、時間はかかるようになると思います）

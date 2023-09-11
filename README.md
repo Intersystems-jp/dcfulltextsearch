@@ -84,9 +84,8 @@ http://localhost:52773/csp/user/search.csp?IRISUsername=_system&IRISPassword=SYS
 ## Reactサンプル検索プログラム
 ## React Sample Program
 
-詳細は、reactの下のREADME.mdを参照
-
-Read README.md under react directory
+- 詳細は、reactの下のREADME.mdを参照
+- Read README.md under react directory
 
 ## 環境の削除 
 ## Removing the environment

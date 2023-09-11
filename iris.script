@@ -5,6 +5,12 @@ Do ##class(Config.NLS.Locales).Install("jpuw")
 set ssl = ##class(Security.SSLConfigs).%New()
 set ssl.Name = "MYSSL"
 set status = ssl.%Save()
+set sec = ##class("Security.Applications").%%New()
+set sec.Name = "/api/dc"
+set sec.NameSpace = "USER"
+set sec.DispatchClass ="DC.Broker"
+set sec.AutheEnabled = 96
+set status = sec.%%Save()
 
 zn "USER"
 set io = ##class(%SYS.NLS.Device).SetIO("UTF8")

@@ -36,10 +36,10 @@
 
  - components
 
-   Header.tsx
-   Home.tsx
-   Query.tsx
-   TopicList.tsx
+   - Header.tsx
+   - Home.tsx
+   - Query.tsx
+   - TopicList.tsx
 
  - Hooks
    

@@ -24,26 +24,28 @@ const [width] = useWindowSize();
  
  useEffect( () => {
 
-	setIsLoading(true);
-    setIsError(false);
-  
-	axios
-	  .get<any>(`http://${ServerAddress}:${ServerPort}${ApplicationName}/Search/${keyword}?IRISUsername=${Username}&IRISPassword=${Password}`)
-	  .then((result: any) => {
-	  const topics = result.data.map((topic: any) => ({
-		id: topic.id,
-		title: topic.title,
-		url: topic.url
-      }));
-      setTopicList(topics);
-	  })
-      .catch((error: any) => {
-        setIsError(true)
-        console.dir(error);
-	  })
-	  // eslint-disable-next-line react-hooks/exhaustive-deps
-      .finally(() => setIsLoading(false));}, [keyword]);   
+    if (keyword !== null && keyword !== "") {
 
+	  setIsLoading(true);
+      setIsError(false);
+      
+	  axios
+	    .get<any>(`http://${ServerAddress}:${ServerPort}${ApplicationName}/Search/${keyword}?IRISUsername=${Username}&IRISPassword=${Password}`)
+	    .then((result: any) => {
+	    const topics = result.data.map((topic: any) => ({
+		  id: topic.id,
+		  title: topic.title,
+		  url: topic.url
+        }));
+        setTopicList(topics);
+	    })
+        .catch((error: any) => {
+          setIsError(true)
+          console.dir(error);
+	    })
+	    // eslint-disable-next-line react-hooks/exhaustive-deps
+        .finally(() => setIsLoading(false));}}, [keyword]);   
+        
   return (
     <>
 	<table style = {{width: "100%"}}><tbody>

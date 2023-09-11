@@ -28,7 +28,7 @@ const [width] = useWindowSize();
     setIsError(false);
   
 	axios
-	  .get<any>(`http://${ServerAddress}:${ServerPort}${ApplicationName}/getURLs/${keyword}?IRISUsername=${Username}&IRISPassword=${Password}`)
+	  .get<any>(`http://${ServerAddress}:${ServerPort}${ApplicationName}/Search/${keyword}?IRISUsername=${Username}&IRISPassword=${Password}`)
 	  .then((result: any) => {
 	  const topics = result.data.map((topic: any) => ({
 		id: topic.id,
@@ -39,8 +39,7 @@ const [width] = useWindowSize();
 	  })
       .catch((error: any) => {
         setIsError(true)
-        console.log('error = ' + error);
-		setErrorText(error.response.data.summary);
+        console.dir(error);
 	  })
 	  // eslint-disable-next-line react-hooks/exhaustive-deps
       .finally(() => setIsLoading(false));}, [keyword]);   

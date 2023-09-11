@@ -6,7 +6,6 @@ export const Home = () => {
 
   return (
     <>
-        <Tab>キーワード検索</Tab>
       <div className="title">
 	  <Header />
 	  </div>

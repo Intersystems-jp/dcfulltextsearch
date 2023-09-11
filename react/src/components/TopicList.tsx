@@ -53,7 +53,7 @@ const [width] = useWindowSize();
 		 : (
 		 topicList.map((topic: any) => (
 		 
-		 <tr style = {{width: "100%"}}><a href={topic.linkto} target="_blank"><button className = "btn btn-outline-primary" style = {{textAlign: "left"}}><td><div style = {{whiteSpace: "nowrap",overflow: "hidden", width: width-40,textOverflow: "ellipsis"}}>{`${topic.title}`}</div></td><td><i className="bi bi-chevron-right float-end"></i></td></button></a></tr>
+		 <tr style = {{width: "100%"}}><a href={topic.url} target="_blank"><button className = "btn btn-outline-primary" style = {{textAlign: "left"}}><td><div style = {{whiteSpace: "nowrap",overflow: "hidden", width: width-40,textOverflow: "ellipsis"}}>{`${topic.title}`}</div></td><td><i className="bi bi-chevron-right float-end"></i></td></button></a></tr>
 		 )))
 	  }
 	</tbody></table>

@@ -57,7 +57,7 @@ git clone https://github.com/Intersystems-jp/dcfulltextsearch.git
 - ブラウザで以下のurlを指定します。
 - In your browser, specify the following url
 
-http://localhost:52775/csp/sys/UtilHome.csp?$NAMESPACE=USER&IRISUsername=_system&IRISPassword=SYS
+http://localhost:52773/csp/sys/UtilHome.csp?$NAMESPACE=USER&IRISUsername=_system&IRISPassword=SYS
 
 
 - 一番左のペインからシステムエクスプローラ>SQLを選択します。
@@ -79,7 +79,7 @@ SELECT id,title,url FROM DC.Topic WHERE %ID %FIND Search_Index(textindex,'ハイ
 ## サンプル検索プログラム 
 ## Sample query program
 
-http://localhost:52775/csp/user/search.csp?IRISUsername=_system&IRISPassword=SYS
+http://localhost:52773/csp/user/search.csp?IRISUsername=_system&IRISPassword=SYS
 
 
 ## 環境の削除 

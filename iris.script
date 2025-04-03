@@ -13,6 +13,7 @@ set sec.AutheEnabled = 96
 set status = sec.%%Save()
 
 zn "USER"
+do DISABLE^%NOJRN
 set io = ##class(%SYS.NLS.Device).SetIO("UTF8")
 do $System.OBJ.LoadDir("/opt/irisapp/src","ck",,1)
 do $SYSTEM.CSP.LoadPageDir("/csp/user")

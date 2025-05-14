@@ -18,11 +18,11 @@ ClassMethod getURLs(pKeyword As %String) As %Status
     
     set item = {}
 		
-	set item.id = resultset.id
-	set item.title = resultset.title
-	set item.url = resultset.url
+    set item.id = resultset.id
+    set item.title = resultset.title
+    set item.url = resultset.url
 	
-	do urls.%Push(item)
+    do urls.%Push(item)
 		
   }
   write urls.%ToJSON()

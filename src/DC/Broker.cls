@@ -8,7 +8,7 @@ Parameter HandleCorsRequest = 1;
 XData UrlMap
 {
 <Routes>
-  <Route Url="/Search/:Keyword" Method="GET" Call="DC.REST:getURLs"/>
+<Route Url="/Search/:Keyword" Method="GET" Call="DC.REST:getURLs"/>
 </Routes>
 }
 
